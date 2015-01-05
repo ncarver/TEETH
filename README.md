@@ -29,7 +29,7 @@ To build your own TEETH Smart Toothbrush Holder you will need
 * Intel IoT Analytics Dashboard
 * An e-mail account for SMTP services
 
-See the step-by-step instructions at http://instructables.com/
+See the step-by-step instructions at http://www.instructables.com/id/TEETH-Adding-IOT-to-Your-Home-with-Intel-Edison
 
 To rebuild this documentation run
 * jsdoc main.js README.md -d docs
