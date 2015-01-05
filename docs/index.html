@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JSDoc: Index</title>
+
+    <script src="scripts/prettify/prettify.js"> </script>
+    <script src="scripts/prettify/lang-css.js"> </script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+
+<body>
+
+<div id="main">
+
+    <h1 class="page-title">Index</h1>
+
+    
+
+
+
+    
+
+
+    <h3> </h3>
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+    <section>
+        <article><h1>TEETH Toothbrush Holder IoT App</h1><p>A node.js application using the Intel Edison board. </p>
+<p>TEETH is Timer Encouraging Everyone to Health. It is just one part of encouraging IOT in the most important room of the house -- The Bathroom 2.0 Movement.</p>
+<h2>Description</h2><p>The Smart TEETH Toothbrush holder uses sensors to arm a timer when you remove your touthbrush. After time to get your toothpaste ready, it begins a timer with an encouraging sound.</p>
+<p>The timer uses encouraging text and pleasant colors -- moving to green -- to coach you to the ADA recommended 2 minute brushing time.</p>
+<p>If you complete the timer, you get a pleasing end sound and an email congrats!</p>
+<p>If instead, you leave the room and turn out the lights, the Smart TEETH technology pays attention. The timer stops early without complaint.</p>
+<p>Every session is sent to cloud. You will see how many times a day you brushed, and if you met the ADA goal.</p>
+<p>The Smart TEETH toothbrush holder is great for health-conscious folks, or those under dental supervision. The code supports multi-toothbrush models -- great for families who need to encourage children's brushing habits too!</p>
+<h2>Building TEETH</h2><p>To build your own TEETH Smart Toothbrush Holder you will need</p>
+<ul>
+<li>Touch sensitive switches</li>
+<li>Color LCD screen using I2C</li>
+<li>Light sensor</li>
+<li>Intel Edison Board</li>
+<li>Intel IoT Analytics Dashboard</li>
+<li>An e-mail account for SMTP services</li>
+</ul>
+<p>See the step-by-step instructions at http://instructables.com/</p>
+<p>To rebuild this documentation run</p>
+<ul>
+<li>jsdoc main.js README.md -d docs</li>
+</ul>
+<h2>Important App Files</h2><ul>
+<li>main.js -- all code needed for this project</li>
+<li>package.json -- node.js description file</li>
+<li>icon.png -- icon displayed in Intel XDK IDE</li>
+<li>README.md -- this file</li>
+<li>toothbrush-timer.xdk -- definition file used by Intel XDK</li>
+<li>toothbrush-timer.xdke -- definitino file used by Intel XDK</li>
+</ul>
+<h2>Important Terminal Commands for Edison</h2><p>connect to linux command line as root</p>
+<ul>
+<li>screen /dev/tty.usbserial-(tab) 115200 -L</li>
+</ul>
+<p>configure wireless connection</p>
+<ul>
+<li>configure_edison --wifi</li>
+</ul>
+<p>find IP address</p>
+<ul>
+<li>ip a</li>
+</ul>
+<p>determine space available</p>
+<ul>
+<li>df -h</li>
+</ul>
+<p>delete journal files</p>
+<ul>
+<li>rm -rf /var/log/journal</li>
+</ul>
+<h2>Important Intel IoT Analytics Commands for Edison</h2><p>Dashboard website</p>
+<ul>
+<li>https://dashboard.us.enableiot.com/v1/ui/dashboard#/chart</li>
+</ul>
+<p>Confirm iotkit agent is configured</p>
+<ul>
+<li>iotkit-admin test</li>
+</ul>
+<p>Get catalog list from Intel</p>
+<ul>
+<li>iotkit-admin catalog</li>
+</ul>
+<p>Register a component from the catalog to this Edison</p>
+<ul>
+<li>iotkit-admin register <component_name> <catalogid></li>
+</ul>
+<p>List registered components on this Edison</p>
+<ul>
+<li>iotkit-admin components</li>
+</ul>
+<p>Send test data to cloud</p>
+<ul>
+<li>iotkit-admin observation <component_name> <value> </li>
+</ul>
+<p>start the IOT Cloud Analytics agent</p>
+<ul>
+<li>systemctl start iotkit-agent</li>
+</ul>
+<h2>License Information Follows</h2><p>Copyright (c) 2014, Nathan Carver. All rights reserved.</p>
+<p>Redistribution and use in source and binary forms, with or without modification, are permitted 
+provided that the following conditions are met:</p>
+<ol>
+<li><p>Redistributions of source code must retain the above copyright notice, this list of conditions
+and the following disclaimer.</p>
+</li>
+<li><p>Redistributions in binary form must reproduce the above copyright notice, this list of conditions
+and the following disclaimer in the documentation and/or other materials provided with the distribution.</p>
+</li>
+<li><p>Neither the name of the copyright holder nor the names of its contributors may be used to endorse
+or promote products derived from this software without specific prior written permission.</p>
+</li>
+</ol>
+<p>THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS &quot;AS IS&quot; AND ANY EXPRESS OR IMPLIED
+WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
+A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE 
+FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT 
+LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS 
+INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR 
+TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF 
+ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.</p></article>
+    </section>
+
+
+
+
+
+
+
+
+
+<section>
+
+<header>
+    
+        <h2>
+        main.js
+        </h2>
+        
+    
+</header>
+
+<article>
+    <div class="container-overview">
+    
+        
+            <div class="description">Code to run the TEETH Smart Toothbrush Holder on Intel Edison board.
+
+Code is maintained at https://github.com/ncarver/TEETH-IotToothbrushHolder.
+
+All code and modules are defined in this file, main.js.</div>
+        
+
+        
+
+
+<dl class="details">
+
+    
+    <dt class="tag-version">Version:</dt>
+    <dd class="tag-version"><ul class="dummy"><li>0.0.1</li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-author">Author:</dt>
+    <dd class="tag-author">
+        <ul>
+            <li>Nathan Carver</li>
+        </ul>
+    </dd>
+    
+
+    
+    <dt class="tag-copyright">Copyright:</dt>
+    <dd class="tag-copyright"><ul class="dummy"><li>Nathan Carver 2014</li></ul></dd>
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="main.js.html">main.js</a>, <a href="main.js.html#line28">line 28</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+        
+    
+    </div>
+
+    
+
+    
+
+    
+
+     
+
+    
+
+    
+
+    
+
+    
+
+    
+</article>
+
+</section>
+
+
+
+
+</div>
+
+<nav>
+    <h2><a href="index.html">Index</a></h2><h3>Classes</h3><ul><li><a href="Buzzer.html">Buzzer</a></li><li><a href="Logger.html">Logger</a></li><li><a href="Mailer.html">Mailer</a></li><li><a href="Metrics.html">Metrics</a></li><li><a href="Screen.html">Screen</a></li><li><a href="Sensors.html">Sensors</a></li><li><a href="Teeth.html">Teeth</a></li></ul><h3>Global</h3><ul><li><a href="global.html#constants">constants</a></li><li><a href="global.html#timers">timers</a></li></ul>
+</nav>
+
+<br clear="both">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.3.0-alpha10</a> on Sun Jan 04 2015 22:06:13 GMT-0500 (EST)
+</footer>
+
+<script> prettyPrint(); </script>
+<script src="scripts/linenumber.js"> </script>
+</body>
+</html>
